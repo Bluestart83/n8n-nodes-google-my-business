@@ -1,7 +1,6 @@
 //import { IHttpRequestOptions } from 'n8n-core'
 import {
 	IExecuteFunctions,
-	IDataObject,
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
@@ -12,23 +11,16 @@ import {
 export class GoogleMyBusiness implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Google My Business',
-		name: 'googleMyBusiness',
-		icon: 'file:google-my-business.svg',
-		group: ['transform'],
-		version: 1,
-		description: 'Fetch and reply to Google My Business reviews',
-		defaults: {
-			name: 'Google My Business',
-			color: '#1a73e8',
-		},
-		inputs: ['main'],
-		outputs: ['main'],
-		credentials: [
-			{
-				name: 'googleApi',
-				required: true,
-			},
-		],
+        name: 'googleMyBusiness',
+        icon: 'file:google-my-business.svg',  // Reference the icon
+        group: ['input'],
+        version: 1,
+        description: 'Manage your Google My Business reviews',
+        defaults: {
+            name: 'Google My Business',
+        },
+        inputs: ['main'],
+        outputs: ['main'],
 		properties: [
 			{
 				displayName: 'Account ID',
@@ -62,7 +54,6 @@ export class GoogleMyBusiness implements INodeType {
 				],
 				default: 'fetchReviews',
 				required: true,
-				description: 'Select the action to perform',
 			},
 			{
 				displayName: 'Review ID',
