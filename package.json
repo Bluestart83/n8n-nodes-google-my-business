@@ -42,12 +42,10 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/GoogleApi.credentials.ts",
-      "dist/credentials/HttpBinApi.credentials.js"
+      "dist/credentials/GoogleApi.credentials.ts"
     ],
     "nodes": [
-      "dist/nodes/GoogleMyBusiness/GoogleMyBusiness.node.ts",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/GoogleMyBusiness/GoogleMyBusiness.node.ts"
     ]
   },
   "devDependencies": {
